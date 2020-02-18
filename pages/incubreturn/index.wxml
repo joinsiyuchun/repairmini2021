@@ -1,0 +1,41 @@
+<view class="main">
+
+  <view class="art-title">
+    {{item.type}}-归还
+  </view>
+  <view class="art-content">
+    <view> 状态： {{item.loan_status}}</view>
+    <view> 房间： {{item.room}}</view>
+    <view> 品牌序列号： {{item.brand}}-{{item.seriesno}}</view>
+  </view>
+
+  <form bindsubmit="formSubmit" report-submit="true">
+  
+    <view class="content-comment">
+      <label>归还科室</label>
+      <input type="text" name="loaner"  placeholder="请输入归还科室" />
+    </view>
+    
+
+  
+    <view class="content-comment">
+      <label>设备状态</label>
+      <view style="margin-top: 20rpx;">
+        <radio-group name="health" style="font-size: 32rpx;">
+          <label>
+            <radio value="全部通过" checked/>完好</label>
+          <label>
+            <radio value="部分通过" />部分完好</label>
+           <label>
+            <radio value="未通过" />损坏</label>
+        </radio-group>
+      </view>
+    </view>
+      <view class="content-comment">
+      <label>备注</label>
+      <textarea name="memo" placeholder="如有其他情况，请输入备注" ></textarea>
+    </view>
+
+    <button formType="submit" class="button">保存</button>
+  </form>
+</view>

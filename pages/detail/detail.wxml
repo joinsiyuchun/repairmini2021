@@ -1,0 +1,15 @@
+<!--pages/detail/detail.wxml-->
+<view class="info">
+  
+  <!-- 昵称 -->
+  <view>
+    <view class="fl">姓名</view>
+    <view class="rl">{{username}}<view class="arrow"></view></view>
+  </view>
+  <!-- 性别 -->
+  <view>
+    <view class="fl">性别</view>
+    <view class="rl">{{gender}}<view class="arrow"></view></view>
+  </view>
+  <button bindtap="jump"  class="tips">修改资料</button>
+</view>

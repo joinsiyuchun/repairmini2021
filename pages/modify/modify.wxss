@@ -1,0 +1,32 @@
+/* pages/modify/modify.wxss */
+page {
+  font-size: 32rpx;
+}
+
+.section {
+  padding: 40rpx;
+  border-bottom: 1px solid #efefef;
+}
+
+.section:last-child {
+  border: none;
+}
+
+.section-title {
+  width: 20%;
+  float: left;
+}
+
+label {
+  padding: 0 20rpx;
+}
+
+.tips {
+  width: 80%;
+  text-align: center;
+  margin: 10rpx auto 20rpx;
+  padding: 0rpx 0rpx;
+  background: #ff9c35;
+  color: #fff;
+  font-size: 36rpx;
+}

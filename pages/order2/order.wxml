@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="title">输入权限申请</view>
+  <view class="section">
+    <view class="title">选择医院：</view>
+    <picker class="input" bindchange="companyInput" value="{{index}}" range="{{com}}">
+      <view>{{com[index]}}</view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="title">验证码：</view>
+    <input class="input" type="number" bindinput="noInput" placeholder="请输入验证码" />
+  </view>
+  <button class="tips" bindtap="verify"> 提交 </button>
+</view>

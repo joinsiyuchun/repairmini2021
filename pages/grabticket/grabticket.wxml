@@ -1,0 +1,30 @@
+<view class="amountBg">
+  <view class="bg">
+    <view class="icon">Tips</view>
+    <view class="tip">线下获取验证码后，请提交审核，通过后，即可在此处查看权限</view>
+
+  </view>
+</view>
+<view class="content">
+
+  <view class="hr"></view>
+  <view class="list">
+    <view class="list-empty" wx:if="{{company.length === 0}}">您没有申请权限</view>
+  </view>
+  <view wx:for="{{company}}" wx:key="id">
+  <view class="item" >
+    <view class="ticket">
+      <view class="station">{{item.org_name}}</view>
+      <view class="desc1">有效期：{{item.start_date}}至{{item.expired_date}}</view>
+    </view>
+    <view class="opr" wx:if="{{item.status===1}}">
+      选中
+    </view>
+    <view class="start"  bindtap="switchhospital" data-id="{{item.org_id}}" wx:if="{{item.status===0}}"   >
+      未选中
+    </view>
+  </view>
+  <view class="hr"></view>
+  </view>
+  
+</view>

@@ -1,0 +1,50 @@
+<view class="main">
+
+  <view class="art-title">
+    {{item.type}}
+  </view>
+  <view class="art-content">
+    <view> 状态： {{item.status}}</view>
+    <view> 房间： {{item.room}}</view>
+    <view> 品牌序列号： {{item.brand}}-{{item.seriesno}}</view>
+  </view>
+
+  <form bindsubmit="formSubmit" report-submit="true">
+    <view class="content-comment">
+     <label>检查类型</label>
+      <view style="margin-top: 20rpx;">
+        <radio-group name="type" style="font-size: 32rpx;">
+          <label>
+            <radio value="1" checked/>预防性维护</label>
+          <label>
+            <radio value="2" />每日检查
+            </label>
+          <label>
+            <radio value="3" />每周巡检
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+  
+    <view class="content-comment">
+      <label>结果</label>
+      <view style="margin-top: 20rpx;">
+        <radio-group name="result" style="font-size: 32rpx;">
+          <label>
+            <radio value="全部通过" checked/>全部通过</label>
+          <label>
+            <radio value="部分通过" />部分通过</label>
+           <label>
+            <radio value="未通过" />未通过</label>
+        </radio-group>
+      </view>
+    </view>
+      <view class="content-comment">
+      <label>备注</label>
+      <textarea name="memo" placeholder="如有其他情况，请输入备注" ></textarea>
+    </view>
+
+    <button formType="submit" class="button">保存</button>
+  </form>
+</view>

@@ -1,0 +1,38 @@
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+  <block >
+    <swiper-item>
+      <image src="https://repair.yck12.com/static/uploads/default/banner_2.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://repair.yck12.com/static/uploads/default/banner_1.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://repair.yck12.com/static/uploads/default/banner_3.png"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="content">
+  <view data-id="1" bindtap="toIncubList">
+    <image src="/images/iconone.png"></image>
+    <view>使用中</view>
+  </view>
+  <view data-id="2" bindtap="toBackIncubList">
+    <image src="/images/icontwo.png"></image>
+    <view>备机</view>
+  </view>
+  <view data-id="3" bindtap="toIncubList">
+    <image src="/images/iconthree.png"></image>
+    <view>待接修</view>
+  </view>
+  <view data-id="4" bindtap="toIncubList">
+    <image src="/images/iconfour.png"></image>
+    <view>维修中</view>
+  </view>
+</view>
+
+<!-- 中间部分 -->
+<view class="ad-box" bindtap="start">
+  <image src="/images/image_ad.png" class="ad-image"></image>
+</view>
+
