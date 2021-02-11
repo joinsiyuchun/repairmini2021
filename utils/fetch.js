@@ -9,8 +9,10 @@ module.exports = function(path, data, method) {
       header: {
         'Content-Type': 'json',
         'X-Requested-With': 'XMLHttpRequest',
-        'Cookie': sess ? 'PHPSESSID=' + sess : '',
-        //'Cookie': 'XDEBUG_SESSION'
+        'Cookie': sess ? 'PHPSESSID=' + sess : ''
+        // 'Cookie': sess ? 'PHPSESSID=' + sess +';XDEBUG_SESSION=XDEBUG_ECLIPSE' : ''
+        // , 'Cookie': 'XDEBUG_SESSION'
+      
       },
       success: res => {
         if (res.header['Set-Cookie'] !== undefined) {

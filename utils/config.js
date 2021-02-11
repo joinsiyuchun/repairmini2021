@@ -1,3 +1,4 @@
 module.exports = {
-  url: 'https://repair.yck12.com/public/api/' 
+   url: 'https://yck12.com/api/' 
+   // url: 'http://operator.com/api/' 
 }

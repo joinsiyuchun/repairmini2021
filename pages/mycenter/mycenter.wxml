@@ -1,87 +1,11 @@
-<view class="amountBg">
-
-
-
+<view class="bannerBg">
   <view class="img avatar">
     <open-data type="userAvatarUrl"></open-data>
   </view>
   <view class="account">
     <open-data type="userNickName"></open-data>
-
   </view>
-
 </view>
-<view class="content">
-  <view class="order">
-    <view class="desc" bindtap="toPaymentList" data-id='1' >
-      <view >
-        <image src="../../images/icon/grzx/hcpdd.jpg" style="width:22px;height:25px;"></image>
-      </view>
-      <view>待结算</view>
-    </view>
-    <view class="desc" bindtap="toPaymentList" data-id='2'>
-      <view>
-        <image src="../../images/icon/grzx/qpdd.jpg" style="width:22px;height:25px;"></image>
-      </view>
-      <view>保内结算</view>
-    </view>
-    <view class="desc" bindtap="toPaymentList" data-id='3'>
-      <view>
-        <image src="../../images/icon/grzx/jpdd.jpg" style="width:22px;height:25px;"></image>
-      </view>
-      <view>保外结算</view>
-    </view>
-    <view class="desc" bindtap="toPaymentList" data-id='4'>
-      <view>
-        <image src="../../images/icon/grzx/qbdd.jpg" style="width:22px;height:25px;"></image>
-      </view>
-      <view>全部工单</view>
-    </view>
-  </view>
-  <view class="clear"></view>
-  <view class="item">
-    <view class="icon">
-      <image src="../../images/icon/grzx/wdcf.jpg" style="width:22px;height:21px;"></image>
-    </view>
-    <view class="itemName">
-      <view>个人资料</view>
-    </view>
-    <view class="right" bindtap="tomyInfo">
-      <text class="opr">修改个人信息</text>></view>
-  </view>
-  <view class="line"></view>
-  <view class="item">
-    <view class="icon">
-      <image src="../../images/icon/grzx/cxfw.jpg" style="width:22px;height:21px;"></image>
-    </view>
-    <view class="itemName">
-      <view>权限申请</view>
-    </view>
-    <view class="right" bindtap="toInvite">
-      <text class="opr">验证码填写</text>></view>
-  </view>
-  <view class="hr"></view>
-  <view class="item">
-    <view class="icon">
-      <image src="../../images/icon/grzx/yqhy.jpg" style="width:22px;height:21px;"></image>
-    </view>
-    <view class="itemName">
-      <view>切换医院</view>
-    </view>
-    <view class="right" bindtap="grabTicket">
-      <text class="opr">切换</text>></view>
-  </view>
-  <view class="hr"></view>
- <view class="item">
-    <view class="icon">
-      <image src="../../images/icon/grzx/yqhy.jpg" style="width:22px;height:21px;"></image>
-    </view>
-    <view class="itemName">
-      <view>电话报修</view>
-    </view>
-    <view class="right" bindtap="callservice">
-      <text class="opr">拨打</text>></view>
-  </view>
-  <view class="hr"></view>
-
+<view class="figurebox">
+ <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ec }}"></ec-canvas>
 </view>

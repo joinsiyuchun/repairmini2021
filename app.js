@@ -11,6 +11,7 @@ App({
       } else {
         this.login({
           success: () => {
+            wx.hideLoading()
             this.onUserInfoReady()
           },
           fail: () => {

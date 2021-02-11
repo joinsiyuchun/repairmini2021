@@ -1,29 +1,35 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/list/list",
-    "pages/order/checkout/checkout",
-    "pages/order/detail/detail",
-    "pages/order/list/list",
-    "pages/order/payment/list",
+   
+    "pages/home/index",
+    "pages/ordercenter/list",
+    "pages/createorder/list",
+    "pages/workorder/list",
+    "pages/workorder/inprogress/list",
+    "pages/workorder/complete/list",
+    "pages/workorder/history/list",
+    "pages/backuplist/index",
+    "pages/itempage/index",
+    "pages/backuplog/index",
+    "pages/checkout/checkout",
+    "pages/orderdetail/detail",
+    "pages/itemlist/index",
+    "pages/calendar/calendar",
     "pages/record/record",
-    "pages/incubator/index",
-    "pages/incubback/index",
-    "pages/incublist/index",
-    "pages/incubresult/index",
-    "pages/incubtransfer/index",
-    "pages/incubreturn/index",
-    "pages/person/person",
-    "pages/detail/detail",
-    "pages/modify/modify",
-    "pages/order2/order",
-    "pages/address/address",
-    "pages/mycenter/mycenter",
-    "pages/grabticket/grabticket"
+    "pages/itemtransfer/index",
+    "pages/itemreturn/index",
+    "pages/qcorder/index",
+    "pages/qclog/index",
+    "pages/mycenter/mycenter"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#93afdb",
+    "navigationBarBackgroundColor": "#4a90e2",
     "navigationBarTitleText": "一键修",
     "navigationBarTextStyle": "white"
   },
@@ -36,20 +42,20 @@
       {
         "selectedIconPath": "images/home.png",
         "iconPath": "images/home_s.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/index",
         "text": "首页"
       },
       {
         "selectedIconPath": "images/order.png",
         "iconPath": "images/order_s.png",
-        "pagePath": "pages/order/list/list",
-        "text": "工单中心"
+        "pagePath": "pages/ordercenter/list",
+        "text": "我的报修"
       },
       {
         "selectedIconPath": "images/me.png",
         "iconPath": "images/me_select.png",
         "pagePath": "pages/mycenter/mycenter",
-        "text": "个人中心"
+        "text": "报告中心"
       }
     ]
   },
