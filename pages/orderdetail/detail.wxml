@@ -1,0 +1,58 @@
+<view class="card">
+  <view class="card-title">报修号：{{workorder.code}}</view>
+  <view class="card-content">
+    <view class="card-info">
+      <text class="card-info">报修时间：{{workorder.report_time}}</text>
+    </view>
+    <view class="card-info">
+      <text class="card-info">报修地点：{{workorder.location}}</text>
+    </view>
+  </view>
+</view>
+<view class="order" wx:for="{{workorder.items}}" wx:for-item="orderitem" wx:key="id">
+  <view class="order-title">维修工单号：{{orderitem.orderno}}</view>
+  <view class="order-list">
+    <view class="steps_box">
+      <progress percent="{{orderitem.status*percent}}" class="progress" stroke-width="1" color="#4a90e2" backgroundColor="#e3e3e3" style="width:{{progress}}%" />
+      <view class="steps_all">
+        <view class="steps_one_box" wx:for="{{StepsList}}" wx:key="index">
+          <view class='{{orderitem.status==index?"steps":orderitem.status<index?"steps3":"steps2"}}'>
+            <view class="steps_img">{{index+1}}</view>
+          </view>
+          <view class="{{Steps>=index?'steps_wenzi':'steps_wenzi2'}}">{{StepsList[index]}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="order-item">
+      <view class="order-item-l">
+        <image class="order-item-image" mode="widthFix" src="{{orderitem.image_url}}" />
+        <view>
+          <view class="order-item-name">{{orderitem.name}}</view>
+          <view class="order-item-number">SN号： {{orderitem.sn}}</view>
+          <view class="order-item-number">PN号： {{orderitem.pn}}</view>
+        </view>
+      </view>
+      <view class="order-item-r" wx:if="{{orderitem.cost!=0}}">
+        <view>
+          <view class="order-item-name">费用：¥{{orderitem.cost}}</view>
+          <view class="order-item-number">服务费用：¥{{orderitem.service_cost}}</view>
+          <view class="order-item-number">配件费用：¥{{orderitem.accessory_cost}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view wx:if="{{orderitem.accept_time!=null}}">
+      <text>接修时间</text>
+      <view>{{orderitem.accept_time}}</view>
+    </view>
+    <view wx:if="{{orderitem.complete_time!=null}}">
+      <text>完修时间</text>
+      <view>{{orderitem.complete_time}}</view>
+    </view>
+    <view wx:if="{{orderitem.halt_time!=0}}">
+      <text>故障停机时长</text>
+      <view>{{orderitem.halt_time}}</view>
+    </view>
+  </view>
+</view>

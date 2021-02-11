@@ -1,0 +1,33 @@
+<!-- 菜单区 -->
+<view class="content">
+  <!-- 左侧菜单 -->
+  <scroll-view class="category" scroll-y>
+    <view wx:for="{{itemList}}" wx:key="id" class="category-item category-{{activeIndex == index ? 'selected' : 'unselect'}}" data-index="{{index}}" bindtap="tapCategory">
+      <view class="category-name">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <!-- 右侧菜单 -->
+  <scroll-view class="item" scroll-y scroll-with-animation scroll-into-view="category_{{tapIndex}}" bindscroll="onItemScroll" bindscrolltolower="scrolltolower">
+    <block wx:for="{{itemList}}" wx:for-item="category" wx:key="id" wx:for-index="category_id">
+      <view class="item-category" id="category_{{category_id}}">
+        {{category.name}}
+        <view class="line"> </view>
+      </view>
+      <view class="list">
+        <view class="itemlist" wx:for="{{category.catagorylist}}" wx:for-item="item" wx:key="id">
+          <view class="item-item-pic" data-cid="{{item.id}}" data-did="{{category.id}}" bindtap="itemlist">
+            <image mode="widthFix" src="{{item.img_url}}" />
+          </view>
+          <view class="item-item-info">
+            <view>{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="itemlist" wx:if="{{category.catagorylist==undefined}}">
+        <view class="item-item-none">
+          <view>无下属设备</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

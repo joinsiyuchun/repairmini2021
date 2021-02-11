@@ -1,0 +1,54 @@
+<view class="main">
+
+  <view class="art-title">
+    {{item.id}}-{{item.code}}
+  </view>
+  <view class="art-content">
+
+    <view> 序列号： {{item.sn}}</view>
+    <view> PN： {{item.pn}}</view>
+  </view>
+
+  <form bindsubmit="formSubmit" report-submit="true">
+    <view class="content-comment">
+      <label>检查类型</label>
+      <view style="margin-top: 20rpx;">
+        <radio-group name="type" style="font-size: 32rpx;">
+          <label>
+            <radio value="3" checked/>预防性维护</label>
+          <label>
+            <radio value="1" />每日检查
+          </label>
+          <label>
+            <radio value="2" />每月巡检
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+
+    <view class="content-comment">
+      <label>结果</label>
+      <view style="margin-top: 20rpx;">
+        <radio-group name="result" style="font-size: 32rpx;">
+          <label>
+            <radio value="1" checked/>一次通过</label>
+          <label>
+            <radio value="2" />整改通过</label>
+          <label>
+            <radio value="0" />未通过</label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="content-comment">
+      <label>位置</label>
+      <input name="location" placeholder="请输入设备位置"></input>
+    </view>
+    <view class="content-comment">
+      <label>备注</label>
+      <textarea name="memo" placeholder="如有其他情况，请输入备注"></textarea>
+    </view>
+
+    <button formType="submit" class="button">保存</button>
+  </form>
+</view>

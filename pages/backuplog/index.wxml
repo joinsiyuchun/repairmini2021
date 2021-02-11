@@ -1,0 +1,46 @@
+<view class="main">
+  <view class="content">
+  <view class="list-empty" wx:if="{{itemlist.length === 0}}">没有操作记录</view>
+    <block wx:for="{{itemlist}}" wx:for-item="item" >
+      <view class="bg">
+        <view class="item">
+          <view class="wrapper left">
+            <view class="normal">科室</view>
+            <view class="line"></view>
+            <view class="blue">{{item.location}}</view>
+          </view>
+          <view class="wrapper center">
+            <view class="normal">操作人员</view>
+            <view class="line"></view>
+            <view class="small">{{item.operator_name}}</view>
+          </view>
+          <view class="wrapper center">
+            <view class="normal">执行日期</view>
+            <view class="line"></view>
+            <view class="small">{{item.transfer_time}}</view>
+          </view>
+          <view class="wrapper right">
+            <view class="normal">操作类型</view>
+            <view class="line"></view>
+            <view class="small borrow" wx:if="{{item.type==0}}">借出</view>
+            <view class="small return" wx:if="{{item.type==1}}">归还</view>
+          </view>
+        </view>
+        <view class="hr"></view>
+        <view class="seat">
+          备注：{{item.memo}}
+        </view>
+      </view>
+    </block>
+   <view class="bottomNav">
+     <view id="2" class="{{currentTab==2?'selected':'common'}}" bindtap="switchNav">全部记录</view>
+     <view style="color:#ffffff">|</view>
+     <view id="0" class="{{currentTab==0?'selected':'common'}}" bindtap="switchNav">外借记录</view>
+     <view style="color:#ffffff">|</view>
+     <view id="1" class="{{currentTab==1?'selected':'common'}}" bindtap="switchNav">归还记录</view>
+     <view style="color:#ffffff">|</view>
+    
+  </view>
+  </view>
+   
+</view>

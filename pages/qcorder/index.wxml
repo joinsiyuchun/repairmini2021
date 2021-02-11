@@ -1,0 +1,56 @@
+<view class="main">
+
+  <view class="art-title">
+    {{itemdata.code}}
+  </view>
+  <view class="art-content">
+    <view> 序列号：{{itemdata.sn}}</view>
+     <view> P/N：{{itemdata.pn}}</view>
+    <view class='tips' bindtap='qcorder' data-id='{{itemdata.id}}'>质控登记</view>
+  </view>
+  <view class="content" style="height:{{winHeight}}px">
+    <block wx:for="{{itemlist}}" wx:for-item="item" >
+      <view class="bg">
+        <view class="item">
+          <view class="wrapper left">
+            <view class="normal">质控结果</view>
+            <view class="line"></view>
+            <view class="blue" wx:if="{{item.qc_status==0}}">未通过</view>
+            <view class="blue" wx:if="{{item.qc_status==1}}">一次通过</view>
+            <view class="blue" wx:if="{{item.qc_status==2}}">整改通过</view>
+          </view>
+          <view class="wrapper center">
+            <view class="normal">执行人</view>
+            <view class="line"></view>
+            <view class="small">{{item.op_name}}</view>
+          </view>
+          <view class="wrapper center">
+            <view class="normal">执行日期</view>
+            <view class="line"></view>
+            <view class="small">{{item.qc_time}}</view>
+          </view>
+          <view class="wrapper right">
+            <view class="blue"></view>
+            <view class="buy" wx:if="{{item.type==1}}">每日检查</view>
+             <view class="buy" wx:if="{{item.type==2}}">每月检查</view>
+              <view class="buy" wx:if="{{item.type==3}}">预防性维护</view>
+          </view>
+        </view>
+        <view class="hr"></view>
+        <view class="seat">
+          备注：{{item.memo}}
+        </view>
+      </view>
+    </block>
+   <view class="bottomNav">
+     <view id="0" class="{{currentTab==0?'selected':'common'}}" bindtap="switchNav">全部</view>
+     <view style="color:#ffffff">|</view>
+     <view id="1" class="{{currentTab==1?'selected':'common'}}" bindtap="switchNav">每日检查</view>
+     <view style="color:#ffffff">|</view>
+     <view id="2" class="{{currentTab==2?'selected':'common'}}" bindtap="switchNav">每月检查</view>
+     <view style="color:#ffffff">|</view>
+     <view id="3" class="{{currentTab==3?'selected':'common'}}" bindtap="switchNav">预防性维护</view>
+    </view>
+   </view>
+   
+</view>

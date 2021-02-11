@@ -1,0 +1,128 @@
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fcfcfc;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+/* 左侧菜单 */
+
+.category {
+  width: 400rpx;
+  height: 100%;
+  background: #fcfcfc;
+  font-size: 28rpx;
+}
+
+/* 隐藏滚动条 */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.category-item {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.category-unselect {
+  color: #6c6c6c;
+  background: #f9f9f9;
+  border-bottom: 1rpx solid #e3e3e3;
+}
+
+.category-selected {
+  color: #93afdb;
+  border-left: 6rpx solid #93afdb;
+  background: white;
+}
+
+/* 右侧菜单 */
+
+.item-category {
+  font-size: 30rpx;
+  padding: 30rpx;
+  color: #6c6c6c;
+   text-align: center;
+}
+.line{
+width:100%;
+height:2rpx;
+background:#aaa;
+}
+
+
+.list {
+  display: flex;
+  width:100%;
+  flex-direction:row-reverse;
+  flex-wrap:wrap;
+ 
+ 
+ justify-content: center;
+}
+
+.itemlist {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-center;
+    text-align: center;
+    align-items: center;
+   
+}
+
+.item-item-pic {
+  margin: 20rpx;
+  width: 140rpx;
+  height: 140rpx;
+  margin-bottom: 20rpx;
+
+}
+
+.item-item-pic > image {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20rpx;
+
+}
+
+.item-item-info {
+  margin: 20rpx;
+  flex: 1;
+  font-size: 24rpx;
+  margin-top: 4rpx;
+  margin-bottom: 20rpx;
+  padding:0;
+  text-align: left;
+  color: #b2b0b0;
+}
+
+.item-item-price {
+  margin-top: 14rpx;
+  color: #f05a86;
+}
+
+.item-item-none {
+   font-size: 30rpx;
+  color: #b2b0b0;
+ text-align: center;
+}
+
+.item-item-opt {
+  margin-top: 40rpx;
+}
+
+.item-item-opt > i:before {
+  font-size: 44rpx;
+  color: #93afdb;
+  content: "\e728";
+}
+

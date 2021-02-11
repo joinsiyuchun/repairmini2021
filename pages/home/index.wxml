@@ -1,0 +1,61 @@
+<view class="bg">
+  <view class="top">
+    <picker bindchange="bindPickerChange" value="{{index}}" range-key="name" range="{{objectArray}}">
+    <view class="picker">
+      当前选择：{{objectArray[index].name}}
+    </view>
+  </picker>
+  </view>
+  <view class="circle" bindtap="report">
+    <image src="/images/home/circle.png"></image>
+  </view>
+</view>
+
+<view class="order">
+  <view class="box" bindtap="toWorkorderList" data-id='0'>
+    <view class="item">
+      <view class="title"></view>
+        <i class="iconfont order-icon"/>
+    </view>
+    <view class="text">待接修</view>
+  </view>
+  <view class="box" bindtap="toWOInprogressList" data-id='1'>
+    <view class="item1">
+      <view class="title"></view>
+        <i class="iconfont order-icon"/>
+         
+    </view>
+    <view class="text">维修中</view>
+  </view>
+  <view class="box" bindtap="toWOCompleteList" data-id='2'>
+    <view class="item2">
+     <view class="title"></view>
+        <i class="iconfont order-icon"/>
+         
+    </view>
+    <view class="text">待结算</view>
+  </view>
+</view>
+<view class="misc">
+  <view class="box" bindtap="toBackupList" data-id='1'>
+    <view class="item">
+     <view class="title"></view>
+        <i class="iconfont transfer-icon"></i>
+    </view>
+    <view class="text">备机借调</view>
+  </view>
+  <view class="box" bindtap="toQualityorder" data-id='1'>
+    <view class="item">
+      <view class="title"></view>
+        <i class="iconfont maintenance-icon"></i>
+    </view>
+    <view class="text">日常保养</view>
+  </view>
+  <view class="box" bindtap="toWOHistory" data-id='4'>
+    <view class="item">
+     <view class="title"></view>
+        <i class="iconfont settle-icon"></i>
+    </view>
+    <view class="text">历史记录</view>
+  </view>
+</view>

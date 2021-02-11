@@ -1,0 +1,76 @@
+
+<view class="order" >
+  <view class="order-title">设备编码：{{itemdata.code}}</view>
+  <view class="order-list">
+    <view class="order-item">
+      <view class="order-item-l">
+        <image class="order-item-image" mode="widthFix" src="{{itemdata.image_url}}" />
+        <view>
+          <view class="order-item-name">设备名称</view>
+          <view class="order-item-number">SN号：</view>
+          <view class="order-item-number">PN号：</view>
+        </view>
+      </view>
+       <view class="order-item-r">
+        <view>
+          <view class="order-red">{{itemdata.name}}</view>
+          <view >{{itemdata.sn}}</view>
+          <view >{{itemdata.pn}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="order" wx:for="{{itemList}}" wx:key="id">
+    <view class="order-title">配件编号：{{item.code}}</view>
+    <view class="order-list">
+      <view class="order-item">
+        <view class="order-item-l">
+          <image class="order-item-image" mode="widthFix" src="{{item.img_url}}" />
+          <view>
+            <view class="order-item-name">配件名称</view>
+            <view class="order-item-number">SN号：</view>
+            <view class="order-item-number">PN号：</view>
+          </view>
+        </view>
+        <view class="order-item-r">
+          <view>
+            <view class="order-red">{{item.name}}</view>
+            <view >{{item.sn}}</view>
+            <view >{{item.pn}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class="order-list">
+    <view class="map">
+      <map
+				class="map"
+				id="map"
+				latitude="{{location.latitude}}"
+				longitude="{{location.longitude}}"
+				show-location="{{showPosition}}"
+				show-compass="{{isShowCompass}}"
+				show-scale="{{isShowScale}}"
+				scale="16"
+			>
+			</map>
+    </view>
+  </view>
+
+  <view class="order-list">
+    	<view class="order-item">
+			<view class="order-item-l" bindtap="onChooseLocation">
+				<text wx:if="{{!location.name}}">选取设备位置>></text>
+				<text  wx:else>设备位置：{{location.name}}</text>
+			</view>
+		</view>
+  </view>
+  <view class=" button-r">
+    <view class="button" bindtap="cancelorder" data-id="{{item.id}}">开始使用</view>
+    <view class="button" bindtap="acceptorder" data-id="{{item.id}}">结束使用</view>
+  </view>
+</view>
+	
+

@@ -1,0 +1,35 @@
+<!-- top部分 -->
+<view class="top">
+  <input placeholder="输入序列号进行搜索" bindinput="bindKeyInput"></input>
+  <view class="icon">
+    <icon type="search" size="25" bindtap="search" />
+  </view>
+</view>
+<view class="content" style="height:{{winHeight}}px">
+  <block wx:for="{{itemList}}">
+    <view class="bg">
+      <view class="item" data-id="{{item.id}}" bindtap="tapIncub">
+        <view class="wrapper left">
+          <view class="blue">{{item.type}}</view>
+          <view class="blue"></view>
+        </view>
+        <view class="wrapper center">
+          <view class="buy">{{item.code}}</view>
+        </view>
+        <view class="wrapper right">
+          <view class="normal">序列号</view>
+          <view class="line"></view>
+          <view class="small">{{item.seriesno}}</view>
+        </view>
+        <view class="wrapper right">
+          <view class="normal">状态</view>
+          <view class="line"></view>
+          <view class="small">{{item.status}}</view>
+        </view>
+
+      </view>
+      <view class="hr"></view>
+    </view>
+  </block>
+
+</view>
