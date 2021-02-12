@@ -83,13 +83,5 @@ Page({
     wx.navigateTo({
       url: '/pages/itemlist/index?type=' + type
     })
-  },
-  onShareAppMessage: function (e) {
-    return {
-      title: "一键维修",
-      path: "pages/home/index",
-      imageUrl: ''
-    }
   }
-  
 })

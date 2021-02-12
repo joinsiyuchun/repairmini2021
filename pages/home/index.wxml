@@ -2,7 +2,7 @@
   <view class="top">
     <picker bindchange="bindPickerChange" value="{{index}}" range-key="name" range="{{objectArray}}">
     <view class="picker">
-      当前选择：{{objectArray[index].name}}
+      设备管理组：{{objectArray[index].name}}
     </view>
   </picker>
   </view>

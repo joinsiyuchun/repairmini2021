@@ -6,6 +6,9 @@
     <open-data type="userNickName"></open-data>
   </view>
 </view>
-<view class="figurebox">
- <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ec }}"></ec-canvas>
+<view wx:if="{{!authorized}}" >
+  <button open-type="getUserInfo"  bindgetuserinfo="getUserInfo" class="right">
+      <view class="auth">授权用户昵称，申请管理组</view>
+  </button>
 </view>
+

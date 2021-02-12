@@ -51,7 +51,7 @@ App({
   },
   userInfoReady: false,
   onUserInfoReady: function() {
-    wx.hideLoading()
+     wx.hideLoading()
     if (this.userInfoReadyCallback) {
       this.userInfoReadyCallback()
     } else {
