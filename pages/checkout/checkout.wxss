@@ -57,7 +57,7 @@ page {
 }
 
 .order-title {
-  font-size: 24rpx;
+  font-size: 32rpx;
   color: #a2a1a0;
   padding: 24rpx;
 }

@@ -59,7 +59,7 @@ Page({
       title: '努力加载中'
     })
     fetch('workorder/querylist', {
-      type: 1,
+      type: 0,
       begindate: this.data.date,
       enddate: this.data.date2
     }).then(data => {
@@ -86,7 +86,7 @@ Page({
       title: '努力加载中'
     })
     fetch('workorder/querylist', {
-      type: 1,
+      type: 0,
       begindate: this.data.date,
       enddate: this.data.date2
     }).then(data => {

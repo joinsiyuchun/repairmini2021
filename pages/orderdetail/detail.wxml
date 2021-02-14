@@ -28,8 +28,9 @@
         <image class="order-item-image" mode="widthFix" src="{{orderitem.image_url}}" />
         <view>
           <view class="order-item-name">{{orderitem.name}}</view>
-          <view class="order-item-number">SN号： {{orderitem.sn}}</view>
-          <view class="order-item-number">PN号： {{orderitem.pn}}</view>
+          <view class="order-item-number">编号： {{orderitem.code}}</view>
+          <view class="order-item-number">品牌： {{orderitem.brand}}</view>
+          <view class="order-item-number">型号： {{orderitem.model}}</view>
         </view>
       </view>
       <view class="order-item-r" wx:if="{{orderitem.cost!=0}}">

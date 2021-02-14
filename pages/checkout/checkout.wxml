@@ -10,8 +10,9 @@
           <image class="order-item-image" mode="widthFix" src="{{item.img_url}}" />
           <view>
             <view class="order-item-name">{{item.type}}</view>
-            <view class="order-item-number"> SN：{{item.sn}}</view>
-            <view class="order-item-number"> PN：{{item.pn}}</view>
+            <view class="order-item-number"> 编码：{{item.code}}</view>
+            <view class="order-item-number"> 品牌：{{item.brand}}</view>
+            <view class="order-item-number"> 型号：{{item.model}}</view>
           </view>
         </view>
          <view class="order-item-r">
